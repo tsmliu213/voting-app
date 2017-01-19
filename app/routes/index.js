@@ -58,10 +58,10 @@ module.exports = function (app, passport) {
 		.delete(isLoggedIn, clickHandler.resetClicks);
 	
 
-	app.route('/api/polls')
+	app.route('/polls')
 		.get(pollHandler.getPolls);
 
 		
-	app.route('/api/new/poll')
+	app.route('/new/poll')
 		.get(pollHandler.createPoll);
 };

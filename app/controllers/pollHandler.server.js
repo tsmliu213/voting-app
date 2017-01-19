@@ -24,12 +24,12 @@ function PollHandler() {
     }
     
     this.getPolls = function(req, res) {
+        //console.log("getting polls");
         Polls
-            .find(function(err, result) {
-                if (err) { throw err; }
-                
-                res.json(result);
-            });
+            .find({}, function(err, results) {
+                if(err) throw err;
+                res.json(results);
+            })
     }
 }
 
